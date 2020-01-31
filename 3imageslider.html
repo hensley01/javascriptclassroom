@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagesliders</title>
+    <style>
+        #slideholder1 {
+            margin: auto;
+            height: 250px;
+            width: 209px;
+            border: 1px solid yellowgreen;
+        }
+
+        #slideholder3 {
+            margin: auto;
+            height: 250px;
+            width: 209px;
+            border: 1px solid yellowgreen;
+        }
+
+        #slideholder2 {
+            margin: auto;
+            height: 250px;
+            width: 209px;
+            border: 1px solid yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+<div id="slideholder1">
+
+</div>
+<div id="slideholder2">
+
+</div>
+<div id="slideholder3">
+
+</div>
+<script>
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder1 = document.getElementById("slideholder1");
+    slideholder1.style.backgroundImage = "url('tekkentop1.jpg')";
+
+    slideholder1.addEventListener("click", function () {
+        slideholder1.style.backgroundImage = "url('tekkentop" + gettekkentop() + ".jpg')";
+    });
+
+    function gettekkentop() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+    }
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url('tekkenmid1.jpg')";
+
+    slideholder2.addEventListener("click", function () {
+        slideholder2.style.backgroundImage = "url('tekkenmid" + gettekkenmid() + ".jpg')";
+    });
+    function gettekkenmid() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+    }
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url('tekkenbot1.jpg')";
+
+    slideholder3.addEventListener("click", function () {
+        slideholder3.style.backgroundImage = "url('tekkenbot" + gettekkenbot() + ".jpg')";
+    });
+
+    function gettekkenbot() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+    }
+
+
+</script>
+</body>
+</html>

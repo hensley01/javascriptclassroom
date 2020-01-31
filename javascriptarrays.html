@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Arrays</title>
+    <style>
+        html {
+           padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        body {
+            font-family: 'Copse', Serif;
+            text-align: center;
+        }
+        img {
+            height: 300px;
+            width: 300px;
+            border: 0px;
+        }
+        #pics {
+            width: 901px;
+            height: 900px;
+            border: solid 1px black;
+            font-size: 1px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Monkey Shuffle</h1>
+<div id="pics">
+    <img src="capybara9.jpg">
+    <img src="capybara8.jpg">
+    <img src="capybara7.jpg">
+    <img src="capybara6.jpg">
+    <img src="capybara5.jpg">
+    <img src="capybara4.jpg">
+    <img src="capybara3.jpg">
+    <img src="capybara2.jpg">
+    <img src="capybara1.jpg">
+</div>
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+    var random = 0;
+    var randomNumbers = [];
+
+    while(randomNumbers.length <9) {
+        random = Math.floor(Math.random() * 9) + 1;
+        if (randomNumbers.lastIndexOf(random) == -1) {
+            randomNumbers.push(random);
+        }
+    }
+    random = 0;
+    for (var plaatje in plaatjes) {
+        plaatjes[plaatje].src = "capybara" + randomNumbers[random] + ".jpg"
+        random++;
+    }
+</script>
+</body>
+</html>
