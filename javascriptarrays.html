@@ -29,15 +29,15 @@
 <body>
 <h1>Monkey Shuffle</h1>
 <div id="pics">
-    <img src="capybara9.jpg">
-    <img src="capybara8.jpg">
-    <img src="capybara7.jpg">
-    <img src="capybara6.jpg">
-    <img src="capybara5.jpg">
-    <img src="capybara4.jpg">
-    <img src="capybara3.jpg">
-    <img src="capybara2.jpg">
-    <img src="capybara1.jpg">
+    <img src="img/capybara9.jpg">
+    <img src="img/capybara8.jpg">
+    <img src="img/capybara7.jpg">
+    <img src="img/capybara6.jpg">
+    <img src="img/capybara5.jpg">
+    <img src="img/capybara4.jpg">
+    <img src="img/capybara3.jpg">
+    <img src="img/capybara2.jpg">
+    <img src="img/capybara1.jpg">
 </div>
 <script>
     var plaatjes = document.getElementsByTagName("img");
@@ -52,7 +52,7 @@
     }
     random = 0;
     for (var plaatje in plaatjes) {
-        plaatjes[plaatje].src = "capybara" + randomNumbers[random] + ".jpg"
+        plaatjes[plaatje].src = "img/capybara" + randomNumbers[random] + ".jpg";
         random++;
     }
 </script>
